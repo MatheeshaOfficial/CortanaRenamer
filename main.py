@@ -44,8 +44,10 @@ async def start_handler(bot: Client, event: Message):
             [
                 [InlineKeyboardButton("Support Group", url="https://t.me/DevsZone"),
                  InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")],
-                [InlineKeyboardButton("⚙SETTINGS⚙", callback_data="settings_handler"),
-                [InlineKeyboardButton("Help 🆘", callback_data="gethelp")]
+                [InlineKeyboardButton("Help 🆘", callback_data="gethelp"),
+                 InlineKeyboardButton("⚙SETTINGS⚙", callback_data="settings_handler")]
+                [InlineKeyboardButton("👌Rate Us 🥇", url="https://t.me/tlgrmcbot?start=FileRename_CortanaBot-review"
+                
             ]
         )
     )
