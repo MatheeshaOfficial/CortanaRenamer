@@ -29,10 +29,10 @@ You can download song by,
 """
 
     ABOUT_DEV_TEXT = """
-<b>Developer is a Super Noob 😅
+Developer is a Super Noob 😅
 You can find him in telegram as @percy_jackson_4
 Developer's github account : [Github](https://github.com/PercyOfficial) 🇱🇰
-If you find any error on this bot please be kind to tell [Developer](https://t.me/percy_jackson_4) or in our [Support Group](https://telegram.me/CortanaBOTS) 😊</b>
+If you find any error on this bot please be kind to tell [Developer](https://t.me/percy_jackson_4) or in our [Support Group](https://telegram.me/CortanaBOTS) 😊
 """
     INFO_TEXT = """
 Hey {mention},
