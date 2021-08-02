@@ -17,13 +17,6 @@ class Config(object):
     DOWNLOAD_PATH = os.environ.get("DOWNLOAD_PATH", "./downloads")
     BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", False))
     ONE_PROCESS_ONLY = bool(os.environ.get("ONE_PROCESS_ONLY", False))
-    START_TEXT = """
-Hi Dear 👋 I am Cortana. A Telegram Files Rename Bot.
-
-Send me a File to Rename.
-
-Made by [Master Chief](t.me/percy_jackson_4)
-    """
     PROGRESS = """
 Percentage : {0}%
 Done: {1}
