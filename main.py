@@ -291,12 +291,12 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
             )
     elif "home" in cb.data:
         await cb.message.edit(
-            text=Translation.START_TEXT.format(message.from_user.mention),
+            text=Translation.START_TEXT.format(cb.message.from_user.mention),
             reply_markup=Translation.START_BUTTONS
         )
     elif "help" in cb.data:
         await cb.message.edit(
-            text=Translation.HELP_TEXT.format(message.from_user.mention),
+            text=Translation.HELP_TEXT.format(cb.message.from_user.mention),
             reply_markup=Translation.HELP_BUTTONS
         )
     elif "about" in cb.data:
@@ -311,7 +311,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
         )
     elif "info" in cb.data:
         await cb.message.edit(
-            text=Translation.INFO_TEXT.format(username=message.from_user.username, first_name=message.from_user.first_name, last_name=message.from_user.last_name, user_id=message.from_user.id, mention=message.from_user.mention),
+            text=Translation.INFO_TEXT.format(username=cb.message.from_user.username, first_name=cb.message.from_user.first_name, last_name=cb.message.from_user.last_name, user_id=cb.message.from_user.id, mention=cb.message.from_user.mention),
             reply_markup=Translation.INFO_BUTTONS
         )
     elif "triggerPrefix" in cb.data:
