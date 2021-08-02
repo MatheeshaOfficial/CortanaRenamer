@@ -311,9 +311,21 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
         )
     elif "devabout" in cb.data:
         await cb.message.edit(
-            text=Translation.ABOUT_DEV_TEXT,
-            reply_markup=Translation.ABOUT_DEV_BUTTONS
-        )
+            text="""
+My devoloper name is Mater Chief 😎🤠
+You can find him in telegram as @percy_jackson_4 🤗
+Developer's github account : [Github](https://github.com/PercyOfficial) 🇱🇰
+If you find any error on this bot please be kind to tell [Developer](https://t.me/percy_jackson_4) or in our [Cortana Support Center](https://telegram.me/CortanaBOTS) 😊🙏
+""",
+            reply_markup=InlineKeyboardMarkup(
+        [[
+        InlineKeyboardButton('Home 🏠', callback_data='home'),
+        InlineKeyboardButton('Help 🆘', callback_data='help'),
+        InlineKeyboardButton('About ❗️', callback_data='about')
+        ],[
+        InlineKeyboardButton('Close ❎', callback_data='closeMeh')
+        ]]
+        ))
     elif "triggerPrefix" in cb.data:
         current_prefix = await db.get_prefix(cb.from_user.id)
         if current_prefix is None:
