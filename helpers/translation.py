@@ -5,7 +5,8 @@ class Translation(object):
     START_TEXT = """
 Hello {} 👋
 I'm Cortana Song Downloader Bot 🇱🇰
-You can rename any file within a shortime with me 😊
+You can rename any file with custom thumnails and custom caption😊
+press /settings costomized me
 If you want to know how to use me just
 touch on " Help 🆘 "  Button 😏
 """    
