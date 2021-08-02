@@ -2,9 +2,8 @@
 
 import asyncio
 from helpers.database.access_db import db
-from pyrogram.errors import FloodWait, MessageNotModified
+from pyrogram.errors import FloodWait, MessageNotModified, UserNotParticipant
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-
 
 async def OpenSettings(event: Message, user_id: int):
     try:
