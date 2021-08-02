@@ -44,7 +44,7 @@ Your details are here 😊
 
     START_BUTTONS = InlineKeyboardMarkup(
         [[
-        InlineKeyboardButton('😎Devoloper', url='https://t.me/percy_jackson_4')
+        InlineKeyboardButton('😎Devoloper', url='https://t.me/percy_jackson_4'),
         InlineKeyboardButton('Rate us ★', url='https://t.me/tlgrmcbot?start=FileRename_CortanaBot-review')
         ],[
         InlineKeyboardButton('Updates Channel🗣', url='https://telegram.me/Cortana_Updates'),
