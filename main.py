@@ -424,6 +424,5 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 text="Sorry Unkil,\n5 Minutes Passed! I can't wait more.",
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Go Back", callback_data="openSettings")]])
             )
-   else:
-        await cb.message.delete()
+   
 Cortana.run()
