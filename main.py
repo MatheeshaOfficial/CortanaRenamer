@@ -309,7 +309,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
             text=Translation.INFO_TEXT.format(cb.message, username=cb.from_user.username, first_name=cb.from_user.first_name, last_name=cb.from_user.last_name, user_id=cb.from_user.id, mention=cb.from_user.mention),
             reply_markup=Translation.INFO_BUTTONS
         )
-    elif "devabout" in cb.data:
+    elif "devaloperinfoo" in cb.data:
         await cb.message.edit(
             text="""
 My devoloper name is Mater Chief 😎🤠
