@@ -53,7 +53,7 @@ Your details are here 😊
         ],[
         InlineKeyboardButton('Help 🆘', callback_data='help')
         ],[
-        InlineKeyboardButton('Settings ⚙', callback_data='OpenSettings')
+        InlineKeyboardButton('Settings ⚙', callback_data='openSettings')
         ]]
     )
     HELP_BUTTONS = InlineKeyboardMarkup(
@@ -62,16 +62,16 @@ Your details are here 😊
         InlineKeyboardButton('About ❗️', callback_data='about'),
         InlineKeyboardButton('User Info ❗', callback_data='info')
         ],[
-        InlineKeyboardButton('Close ❎', callback_data='close')
+        InlineKeyboardButton('Close ❎', callback_data='closeMeh')
         ]]
     )
     ABOUT_BUTTONS = InlineKeyboardMarkup(
         [[
         InlineKeyboardButton('Home 🏠', callback_data='home'),
         InlineKeyboardButton('Help 🆘', callback_data='help'),
-        InlineKeyboardButton('About Dev 🧑‍💻', callback_data='aboutdev')
+        InlineKeyboardButton('About Dev 🧑‍💻', callback_data='devabout')
         ],[
-        InlineKeyboardButton('Close ❎', callback_data='close')
+        InlineKeyboardButton('Close ❎', callback_data='closeMeh')
         ]]
     )
     INFO_BUTTONS = InlineKeyboardMarkup(
@@ -80,7 +80,7 @@ Your details are here 😊
         InlineKeyboardButton('About ❗️', callback_data='about'),
         InlineKeyboardButton('Help 🆘', callback_data='help')
         ],[
-        InlineKeyboardButton('Close ❎', callback_data='close')
+        InlineKeyboardButton('Close ❎', callback_data='closeMeh')
         ]]
     )
     ABOUT_DEV_BUTTONS = InlineKeyboardMarkup(
@@ -89,6 +89,6 @@ Your details are here 😊
         InlineKeyboardButton('Help 🆘', callback_data='help'),
         InlineKeyboardButton('About ❗️', callback_data='about')
         ],[
-        InlineKeyboardButton('Close ❎', callback_data='close')
+        InlineKeyboardButton('Close ❎', callback_data='closeMeh')
         ]]
     ) 
