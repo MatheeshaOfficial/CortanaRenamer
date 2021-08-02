@@ -25,6 +25,7 @@ from helpers.broadcast import broadcast_handler
 from helpers.uploader import UploadFile, UploadVideo, UploadAudio
 from helpers.database.add_user import AddUserToDatabase
 from helpers.display_progress import progress_for_pyrogram, humanbytes
+from helpers.translation import Translation 
 
 Cortana = Client(
     session_name=Config.SESSION_NAME,
