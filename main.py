@@ -247,7 +247,7 @@ async def show_status_count(_, event: Message):
 
 
 @Cortana.on_message(filters.private & filters.command("settings"))
-async def settings_handler(bot: Client, event: Message, ):
+async def settings_handler(bot: Client, event: Message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
     if FSub == 400:
@@ -258,7 +258,7 @@ async def settings_handler(bot: Client, event: Message, ):
     await OpenSettings(editable, user_id=event.from_user.id)
 
 @Cortana.on_callback_query()
-async def callback_handlers(bot: Client, cb: CallbackQuery, usr: Message ):
+async def callback_handlers(bot: Client, cb: CallbackQuery, event: Message):
     if "closeMeh" in cb.data:
         await cb.message.delete(True)
     elif "openSettings" in cb.data:
