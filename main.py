@@ -401,14 +401,6 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Go Back", callback_data="openSettings")]])
             )
 
-import os
-from LeoSongDownloaderBot.translation import Translation
-import config
-from pyrogram import Client
-from pyrogram.errors import UserNotParticipant
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
-from LeoSongDownloaderBot import LeoSongDownloaderBot as app
-
 @Cortana.on_callback_query()
 async def cb_data(client, message):
     if message.data == "home":
