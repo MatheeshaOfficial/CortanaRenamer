@@ -3,7 +3,7 @@ from helpers.translation import Translation
 from configs import Config
 from pyrogram import Client
 from pyrogram.errors import UserNotParticipant
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
 Cortana = Client(
     session_name=Config.SESSION_NAME,
