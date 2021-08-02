@@ -52,7 +52,7 @@ Your details are here 😊
         ],[
         InlineKeyboardButton('Help 🆘', callback_data='help')
         ],[
-        InlineKeyboardButton('Settings ⚙', callback_data='settings_handler')
+        InlineKeyboardButton('Settings ⚙', callback_data='OpenSettings')
         ]]
     )
     HELP_BUTTONS = InlineKeyboardMarkup(
