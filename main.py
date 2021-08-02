@@ -291,12 +291,12 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
             )
     elif "home" in cb.data:
         await cb.message.edit(
-            text=Translation.START_TEXT.format(event.message.from_user.mention),
+            text=Translation.START_TEXT.format(cb.message.from_user.mention),
             reply_markup=Translation.START_BUTTONS
         )
     elif "help" in cb.data:
         await cb.message.edit(
-            text=Translation.HELP_TEXT.format(event.message.from_user.mention),
+            text=Translation.HELP_TEXT.format(cb.message.from_user.mention),
             reply_markup=Translation.HELP_BUTTONS
         )
     elif "about" in cb.data:
