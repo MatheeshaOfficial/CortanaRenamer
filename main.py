@@ -304,11 +304,6 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
             text=Translation.ABOUT_TEXT,
             reply_markup=Translation.ABOUT_BUTTONS
         )
-    elif "aboutdev" in cb.data:
-        await cb.message.edit(
-            text=Translation.ABOUT_DEV_TEXT,
-            reply_markup=Translation.ABOUT_DEV_BUTTONS
-        )
     elif "info" in cb.data:
         await cb.message.edit(
             text=Translation.INFO_TEXT.format(cb.message, username=cb.from_user.username, first_name=cb.from_user.first_name, last_name=cb.from_user.last_name, user_id=cb.from_user.id, mention=cb.from_user.mention),
@@ -427,7 +422,12 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
   
 @Cortana.on_callback_query()
 async def callback_refresh(bot: Client, cb: CallbackQuery):
-        if "refreshme" in cb.data:
+    if "aboutdev" in cb.data:
+        await cb.message.edit(
+            text=Translation.ABOUT_DEV_TEXT,
+            reply_markup=Translation.ABOUT_DEV_BUTTONS
+        )
+    elif "refreshme" in cb.data:
         if config.UPDATES_CHANNEL:
             invite_link = await bot.create_chat_invite_link(int(config.UPDATES_CHANNEL))
             try:
