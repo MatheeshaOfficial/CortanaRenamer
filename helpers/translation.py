@@ -69,7 +69,7 @@ Your details are here 😊
         [[
         InlineKeyboardButton('Home 🏠', callback_data='home'),
         InlineKeyboardButton('Help 🆘', callback_data='help'),
-        InlineKeyboardButton('About Dev 🧑‍💻', callback_data='devaloperinfoo')
+        InlineKeyboardButton('About Dev 🧑‍💻', callback_data='masterchief')
         ],[
         InlineKeyboardButton('Close ❎', callback_data='closeMeh')
         ]]
