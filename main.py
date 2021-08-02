@@ -1,4 +1,4 @@
-# (c) @AbirHasan2005
+# (c) @PercyOfficial
 
 import os
 import time
@@ -23,37 +23,27 @@ from helpers.uploader import UploadFile, UploadVideo, UploadAudio
 from helpers.database.add_user import AddUserToDatabase
 from helpers.display_progress import progress_for_pyrogram, humanbytes
 
-RenameBot = Client(
+Cortana = Client(
     session_name=Config.SESSION_NAME,
     api_id=Config.API_ID,
     api_hash=Config.API_HASH,
     bot_token=Config.BOT_TOKEN
 )
 
+CORTANAIMG = "https://telegra.ph/file/27e0b342107cd56704aa9.jpg"
 
-@RenameBot.on_message(filters.private & filters.command("start"))
-async def start_handler(bot: Client, event: Message):
-    await AddUserToDatabase(bot, event)
-    FSub = await ForceSub(bot, event)
+@Cortana.on_message(filters.command("start"))
+async def start(client, message):
+    await AddUserToDatabase(client, message)
+    FSub = await ForceSub(client, message)
     if FSub == 400:
         return
-    await event.reply_text(
-        text=f"Hi, {event.from_user.mention}\n{Config.START_TEXT}",
-        quote=True,
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [InlineKeyboardButton("Support Group", url="https://t.me/DevsZone"),
-                 InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")],
-                [InlineKeyboardButton("Help 🆘", callback_data="gethelp"),
-                 InlineKeyboardButton("⚙SETTINGS⚙", callback_data="settings_handler")]
-                [InlineKeyboardButton("👌Rate Us 🥇", url="https://t.me/tlgrmcbot?start=FileRename_CortanaBot-review"
-                
-            ]
-        )
+    await message.reply_photo(
+        CORTANAIMG,
+        caption=Translation.START_TEXT.format(message.from_user.mention),
+        reply_markup=Translation.START_BUTTONS
     )
-
-
-@RenameBot.on_message(filters.private & (filters.video | filters.document | filters.audio))
+@Cortana.on_message(filters.private & (filters.video | filters.document | filters.audio))
 async def rename_handler(bot: Client, event: Message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
@@ -162,7 +152,7 @@ async def rename_handler(bot: Client, event: Message):
             await reply_.edit("Sorry Unkil,\n5 Minutes Passed! I can't wait more. Send me File Again to Rename.")
 
 
-@RenameBot.on_message(filters.private & filters.photo & ~filters.edited)
+@Cortana.on_message(filters.private & filters.photo & ~filters.edited)
 async def photo_handler(bot: Client, event: Message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
@@ -173,7 +163,7 @@ async def photo_handler(bot: Client, event: Message):
     await editable.edit("Permanent Custom Thumbnail Saved Successfully!")
 
 
-@RenameBot.on_message(filters.private & filters.command(["delete_thumbnail", "delete_thumb", "del_thumb", "delthumb"]) & ~filters.edited)
+@Cortana.on_message(filters.private & filters.command(["delete_thumbnail", "delete_thumb", "del_thumb", "delthumb"]) & ~filters.edited)
 async def delete_thumb_handler(bot: Client, event: Message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
@@ -189,7 +179,7 @@ async def delete_thumb_handler(bot: Client, event: Message):
     )
 
 
-@RenameBot.on_message(filters.private & filters.command(["show_thumbnail", "show_thumb", "showthumbnail", "showthumb"]) & ~filters.edited)
+@Cortana.on_message(filters.private & filters.command(["show_thumbnail", "show_thumb", "showthumbnail", "showthumb"]) & ~filters.edited)
 async def show_thumb_handler(bot: Client, event: Message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
@@ -220,7 +210,7 @@ async def show_thumb_handler(bot: Client, event: Message):
         await event.reply_text("No Thumbnail Found in Database!\nSend a Thumbnail to Save.", quote=True)
 
 
-@RenameBot.on_message(filters.private & filters.command(["delete_caption", "del_caption", "remove_caption", "rm_caption"]) & ~filters.edited)
+@Cortana.on_message(filters.private & filters.command(["delete_caption", "del_caption", "remove_caption", "rm_caption"]) & ~filters.edited)
 async def delete_caption(bot: Client, event: Message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
@@ -230,12 +220,12 @@ async def delete_caption(bot: Client, event: Message):
     await event.reply_text("Custom Caption Removed Successfully!")
 
 
-@RenameBot.on_message(filters.private & filters.command("broadcast") & filters.user(Config.BOT_OWNER) & filters.reply)
+@Cortana.on_message(filters.private & filters.command("broadcast") & filters.user(Config.BOT_OWNER) & filters.reply)
 async def _broadcast(_, event: Message):
     await broadcast_handler(event)
 
 
-@RenameBot.on_message(filters.private & filters.command("status") & filters.user(Config.BOT_OWNER))
+@Cortana.on_message(filters.private & filters.command("status") & filters.user(Config.BOT_OWNER))
 async def show_status_count(_, event: Message):
     total, used, free = shutil.disk_usage(".")
     total = humanbytes(total)
@@ -252,7 +242,7 @@ async def show_status_count(_, event: Message):
     )
 
 
-@RenameBot.on_message(filters.private & filters.command("settings"))
+@Cortana.on_message(filters.private & filters.command("settings"))
 async def settings_handler(bot: Client, event: Message):
     await AddUserToDatabase(bot, event)
     FSub = await ForceSub(bot, event)
@@ -264,7 +254,7 @@ async def settings_handler(bot: Client, event: Message):
     await OpenSettings(editable, user_id=event.from_user.id)
 
 
-@RenameBot.on_callback_query()
+@Cortana.on_callback_query()
 async def callback_handlers(bot: Client, cb: CallbackQuery):
     if "closeMeh" in cb.data:
         await cb.message.delete(True)
@@ -408,4 +398,4 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
             )
 
 
-RenameBot.run()
+Cortana.run()
