@@ -258,7 +258,7 @@ async def settings_handler(bot: Client, event: Message, ):
     await OpenSettings(editable, user_id=event.from_user.id)
 
 @Cortana.on_callback_query()
-async def callback_handlers(bot: Client, cb: CallbackQuery, message):
+async def callback_handlers(bot: Client, cb: CallbackQuery):
     if "closeMeh" in cb.data:
         await cb.message.delete(True)
     elif "openSettings" in cb.data:
