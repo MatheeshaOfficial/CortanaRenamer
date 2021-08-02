@@ -1,6 +1,6 @@
 import os
 from helpers.translation import Translation
-import config
+from configs import Config
 from pyrogram import Client
 from pyrogram.errors import UserNotParticipant
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
