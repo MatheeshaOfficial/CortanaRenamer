@@ -7,7 +7,7 @@ import shutil
 import string
 import asyncio
 from pyromod import listen
-from pyrogram import Client, filters,
+from pyrogram import Client, filters
 from asyncio import TimeoutError 
 from pyrogram import idle
 from pyrogram.errors import MessageNotModified, FloodWait, UserNotParticipant
