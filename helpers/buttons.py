@@ -1,11 +1,10 @@
-
-
 import os
 from helpers.translation import Translation
 import config
 from pyrogram import Client
 from pyrogram.errors import UserNotParticipant
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+
 Cortana = Client(
     session_name=Config.SESSION_NAME,
     api_id=Config.API_ID,
