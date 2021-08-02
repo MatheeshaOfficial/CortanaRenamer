@@ -13,7 +13,7 @@ Cortana = Client(
   )
 
 @Cortana.on_callback_query()
-async def cb_data(client, message):
+async def callback_handlers(bot: Client, message: CallbackQuery):
     if message.data == "home":
         await message.message.edit_text(
             text=Translation.START_TEXT.format(message.from_user.mention),
