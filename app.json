@@ -1,15 +1,15 @@
 {
     "name": "Telegram Files Rename Bot",
-    "description": "A Very Simple Telegram Files Rename Bot by @AbirHasan2005",
+    "description": "A Very Simple Telegram Files Rename Bot by @TeamSDBOTs",
     "keywords": [
         "telegram",
         "files",
         "rename",
         "bot"
     ],
-    "repository": "https://github.com/AbirHasan2005/Rename-Bot",
-    "website": "https://abirhasan.wtf",
-    "success_url": "https://t.me/AH_RenameBot",
+    "repository": "https://github.com/TeamSDBOTs/CortanaFileRenamer",
+    "website": "https://t.me/Cortana_Updates",
+    "success_url": "https://t.me/FileRename_CortanaBot",
     "env": {
         "API_ID": {
             "description": "Get this value from my.telegram.org or @TeleORG_Bot"
@@ -50,7 +50,7 @@
             "description": "Broadcast as Copy or with Forward Tag. Value should be True/False."
         },
         "SESSION_NAME": {
-            "description": "Any Bot Session Name."
+            "description": "Yor Bot UserName."
         }
     },
     "buildpacks": [ 
