@@ -38,7 +38,7 @@
 
 ## Devs & Contributors
 
-#### • Percy Official    »»  <a href="https://github.com/PercyOfgicial" alt="Master Chief"> <img src="https://img.shields.io/MasterChief-90302f?logo=github" /></a> (OWNER)
+#### • Matheesha Official     »»  <a href="https://github.com/Percyofficial" alt="MasterChief"> <img src="https://img.shields.io/badge/MasterChief-90302f?logo=github" /></a> (OWNER)
 #### • Damantha Jasinghe  »»  <a href="https://github.com/Damantha126" alt="Damantha"> <img src="https://img.shields.io/badge/Damantha-107D8D?logo=github" /></a> (DEV)
 #### • Sadew Jayasekara  »»  <a href="https://github.com/Sadew451" alt="Sadew"> <img src="https://img.shields.io/badge/Sadew-82CAFA?logo=github" /></a> (DEV)
 
