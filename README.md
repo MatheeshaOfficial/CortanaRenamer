@@ -39,9 +39,9 @@
 ## Devs & Contributors
 
 #### • Matheesha Official     »»  <a href="https://github.com/Percyofficial" alt="MasterChief"> <img src="https://img.shields.io/badge/MasterChief-90302f?logo=github" /></a> (OWNER)
-#### • Damantha Jasinghe  »»  <a href="https://github.com/Damantha126" alt="Damantha"> <img src="https://img.shields.io/badge/Damantha-107D8D?logo=github" /></a> (DEV)
-#### • Sadew Jayasekara  »»  <a href="https://github.com/Sadew451" alt="Sadew"> <img src="https://img.shields.io/badge/Sadew-82CAFA?logo=github" /></a> (DEV)
-
+#### • Damantha Jasinghe  »»  <a href="https://github.com/Damantha126" alt="DamanthaJasinghe"> <img src="https://img.shields.io/badge/DamanthaJasinghe-107D8D?logo=github" /></a> (DEV)
+#### • Sadew Jayasekara  »»  <a href="https://github.com/Sadew451" alt="SadewJayasekara"> <img src="https://img.shields.io/badge/Sadew-82CAFA?logo=github" /></a> (DEV)
+#### • Dilhan Official   »»  <a href="https://github.com/infotechbro" alt="Dilhan"> <img src="https://img.shields.io/badge/DilhanOfficial-82CAFA?logo=github" /></a> (DEV)
 
 ## All who helped at a glance 
 
